@@ -3,7 +3,7 @@ const formComponents = [
     id: "Heading",
     name: "Heading",
     element: (props) => (
-      <div className="  cursor-grab w-full">
+      <div className="cursor-grab w-full">
         <h1
           type="text"
           className=" p-1 w-full rounded text-xs"

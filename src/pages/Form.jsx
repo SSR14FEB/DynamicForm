@@ -25,7 +25,7 @@ function SortableItem({ id, element }) {
       {...attributes}
       {...listeners}
       style={style}
-      className="text-black cursor-grab h-18 rounded-md w-full"
+      className="text-black cursor-grab h-14 rounded-md w-full"
     >
       {element}
     </div>
