@@ -13,7 +13,7 @@ function SortableItem({ id, element }) {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
 
-  // 🟢 आइटम को मूव कराने के लिए स्टाइल
+ 
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
@@ -25,7 +25,7 @@ function SortableItem({ id, element }) {
       {...attributes}
       {...listeners}
       style={style}
-      className="text-black cursor-grab h-18 border rounded-md w-full"
+      className="text-black cursor-grab h-18 rounded-md w-full"
     >
       {element}
     </div>
@@ -35,7 +35,7 @@ function SortableItem({ id, element }) {
 export default function Form() {
   const [components, setComponents] = useState([]);
 
-  // 🟢 नई component ऐड करने के लिए फ़ंक्शन
+
   const addComponent = (component) => {
     setComponents((prev) => [
       ...prev,
@@ -43,7 +43,7 @@ export default function Form() {
     ]);
   };
 
-  // 🟢 ड्रैग एंड ड्रॉप इवेंट हैंडलर
+
   const handleDragEnd = (event) => {
     const { active, over } = event;
     if (!over) return;
@@ -65,7 +65,7 @@ export default function Form() {
 
   return (
     <div className="w-screen h-screen border flex items-center justify-start">
-      {/* 🔹 Components List (Left Sidebar) */}
+      {/*  Components List (Left Sidebar) */}
       <aside className="w-1/4 h-full border-gray-500 border-2 flex flex-col p-4">
         <h2 className="text-lg font-bold mb-2">Form Components</h2>
         <ul className="flex flex-wrap gap-2">
@@ -92,7 +92,7 @@ export default function Form() {
         </DndContext>
       </div>
 
-      {/* 🔹 CSS Components (Right Sidebar) */}
+      {/*  CSS Components (Right Sidebar) */}
       <aside className="w-1/4 h-full border-gray-500 border-2 flex flex-col p-4">
         <h2 className="text-lg font-bold mb-2">CSS Components</h2>
         <ul className="flex flex-wrap gap-2">
