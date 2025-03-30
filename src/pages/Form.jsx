@@ -19,7 +19,7 @@ function SortableItem({ id, element }) {
     transform: CSS.Transform.toString(transform),
     transition,
   };
-
+console.log(setNodeRef)
   return (
     <div
       ref={setNodeRef}
@@ -64,7 +64,8 @@ export default function Form() {
     });
   };
 
-  const listRef = useRef();
+  const listRef = useRef([]);
+
   console.log(listRef.current)
   return (
     <div className="w-screen h-screen border flex items-center justify-start">
@@ -99,8 +100,8 @@ export default function Form() {
       <aside className="w-1/4 h-full border-gray-500 border-2 flex flex-col p-4">
         <h2 className="text-lg font-bold mb-2">CSS Components</h2>
         <ul className="flex flex-wrap gap-2">
-          {cssComponents.map((component) => (
-            <li ref={listRef} key={component.id} className="w-full p-2 border text-black font-bold font-mono rounded-sm">
+          {cssComponents.map((component,index) => (
+            <li ref={(el)=>(listRef.current[index])=el} key={component.id} className="w-full p-2 border text-black font-bold font-mono rounded-sm" >
               {component.element()}
             </li>
           ))}
