@@ -5,7 +5,7 @@ const cssComponets = [
       <div className=" h-full w-full flex flex-col justify-start item-center">
         {" "}
         <label htmlFor="Label">Heading</label>
-        <input className="border" type="text" id="Label" />
+        <input className="border pl-2" type="text" id="Label" />
       </div>
     ),
   },
@@ -15,7 +15,7 @@ const cssComponets = [
       <div className=" h-full w-full flex flex-col justify-start item-center">
         {" "}
         <label htmlFor="color">Text colour</label>
-        <input className="border" type="text" id="color" />
+        <input className="border  h-7" type="color"  id="color" />
       </div>
     ),
   },
@@ -25,7 +25,7 @@ const cssComponets = [
       <div className=" h-full w-full flex flex-col justify-start item-center">
         {" "}
         <label htmlFor="Font">Font width</label>
-        <input className="border" type="text" id="font" />
+        <input className="border pl-2" type="text" id="font" />
       </div>
     ),
   },
@@ -34,7 +34,7 @@ const cssComponets = [
     element: () => (
       <div className=" h-full w-full flex flex-col justify-start item-center">
         <label htmlFor="Height">Height</label>
-        <input className=" border" type="number" id="height" />
+        <input className=" border pl-2" type="number" id="height" />
       </div>
     ),
   },
@@ -43,7 +43,7 @@ const cssComponets = [
     element: () => (
       <div className=" h-full w-full flex flex-col justify-start item-center">
         <label htmlFor="Width">Width</label>
-        <input className="border" type="number" id="Width" />
+        <input className="border pl-2" type="number" id="Width" />
       </div>
     ),
   },

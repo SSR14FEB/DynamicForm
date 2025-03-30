@@ -8,12 +8,13 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { useRef } from "react";
 
 function SortableItem({ id, element }) {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
 
- 
+  
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
@@ -63,6 +64,8 @@ export default function Form() {
     });
   };
 
+  const listRef = useRef();
+  console.log(listRef.current)
   return (
     <div className="w-screen h-screen border flex items-center justify-start">
       {/*  Components List (Left Sidebar) */}
@@ -97,7 +100,7 @@ export default function Form() {
         <h2 className="text-lg font-bold mb-2">CSS Components</h2>
         <ul className="flex flex-wrap gap-2">
           {cssComponents.map((component) => (
-            <li key={component.id} className="w-full p-2 border text-black font-bold font-mono rounded-sm">
+            <li ref={listRef} key={component.id} className="w-full p-2 border text-black font-bold font-mono rounded-sm">
               {component.element()}
             </li>
           ))}

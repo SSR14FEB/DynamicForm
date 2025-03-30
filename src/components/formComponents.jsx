@@ -4,7 +4,7 @@ const formComponents = [
     name: "Heading",
     element: (props) => (
       <div className="cursor-grab w-full">
-        <h1
+        <h1 
           type="text"
           className=" p-1 w-full rounded text-xs"
           placeholder="Enter student name"
